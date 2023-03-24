@@ -1,0 +1,154 @@
+.body {
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* 메인 뒷배경 */
+.main_back_img {
+  overflow: hidden;
+}
+.main_back_img img {
+  position: fixed;
+  width: 100vw;
+  min-width: 1800px;
+}
+
+
+/* first view  */
+.first {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* youtube 영상 */
+.main_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+.main_video .youtube_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-width: 1800px;
+}
+/* 가상 선택자 */
+.main_video .youtube_area::before { 
+  content: "";
+  display: block; 
+  /* 16:9 영상 비율로 요소 크기 만들기! */
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+} 
+.main_video .youtube_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3);
+}
+
+#player {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -55px;
+  left: 0;
+}
+.main_video .inner {
+  width: 80%;
+} 
+
+
+/* main_notice */
+
+
+.main_empty {
+
+}
+.main_notice {
+  position: absolute;
+  top: 400px;
+  width: inherit;
+  height: 300px;
+  z-index: 5;
+  font-weight: bold;
+}
+.main_cover .notice {
+  margin-left: 200px;
+  color: white;
+  margin-bottom: 10px;
+}
+.main_cover .notice1 {
+  font-size: 25px;
+  height: 80px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+.main_cover .notice2 {
+  height: 60px;
+  font-size: 40px;
+}
+.main_cover .notice3 {
+  font-size: 65px;
+}
+
+
+@media screen and (max-width : 1200px) { 
+  .main_back_img img {
+    height: 100vh;
+  }
+  .main_back_img img {
+    display: none;
+  }
+  
+  .main_cover .main_notice {
+    width: 90%;
+  }
+  .main_cover .main_notice .notice {
+    margin-left: 150px;
+  }
+  
+}
+
+@media screen and (max-width : 768px) { 
+  .main_back_img img {
+    height: 100vh;
+  }
+  .main_video {
+    height: 100vh;
+  }
+  
+  .main_cover .main_notice {
+    top: 200px;
+    height: 300px;
+  }
+  .main_cover .main_notice .notice {
+    margin-left: 50px;
+  }
+
+  .main_cover .main_notice .notice1 {
+    font-size: 20px;
+    height: 80px;
+    letter-spacing: 2px;
+  }
+  .main_cover .main_notice .notice2 {
+    height: 50px;
+    font-size: 18px;
+  }
+  .main_cover .main_notice .notice3 {
+    font-size: 30px;
+  }
+  
+}

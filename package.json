@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "delete-build": "cd server && rmdir /s /q build",
+    "client-build": "cd client && npm run build && cd ../",
+    "npmci-build": "cd client && npm ci && cd ../ && cd server && npm ci && cd ../",
+    "autobuild": "npm run delete-build && npm run client-build && move ./client/build ./server/",
+    "start": "cd server && node app.js"
+  }
+}

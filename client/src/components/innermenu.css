@@ -1,0 +1,78 @@
+.innerMenu {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/innermenu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.innerMenu_cover {
+  width: 100%;
+}
+.innerMenu .cover1 {
+  padding-top: 100px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerMenu .innerMenu_titlebox {
+  width: 200px;
+  height: 100px;
+  
+}
+.innerMenu .innerMenu_titlebox .innerMenu_title {
+  width: 198px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerMenu_titlebox .title1 {
+  
+}  
+.innerMenu_titlebox .title2 {
+  font-size: 40px;
+  font-weight: 700;
+} 
+
+.innerMenu .cover2 {
+  top: 80px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerMenu .cover2 .innerMenu_menubox {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.innerMenu .cover2 .innerMenu_menu {
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerMenu .cover2 .innerMenu_menu a:hover {
+  color: rgb(117, 117, 117);
+}
+.innerMenu .cover2 .innerMenu_menu a.active {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+
+
+@media screen and (max-width : 768px) { 
+  .innerMenu .cover2 .innerMenu_menubox {
+    width: 300px;
+  }
+
+}  
+
