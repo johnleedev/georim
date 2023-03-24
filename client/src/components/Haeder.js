@@ -36,7 +36,7 @@ function Header () {
             <li>
               <a href="info">회사소개</a>
               <a href="organization">조직도</a>
-              <a href="#">오시는길</a>
+              <a href="contact">오시는길</a>
             </li>
             <li>
               <a href="#">인권존중</a>

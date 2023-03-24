@@ -13,12 +13,17 @@ function A1_CompanyInfo(props) {
       {/* Haeder */}
       <Header></Header>
 
+
+      {/* InnerMenu */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0 }}>
       <InnerMenu 
       title1="기업정보" title2="회사소개" // title2 수정하기
       menu1="회사소개" menu2="조직도" menu3="오시는길" 
       ></InnerMenu>
       </motion.div>
+
+
+      {/* Content */}
 
       <section className="companyinfo">
 

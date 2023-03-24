@@ -24,7 +24,7 @@ function InnerMenu(props) {
           <div className="innerMenu_menubox">
             <li className="innerMenu_menu"><a href="/info">{props.menu1}</a></li>
             <li className="innerMenu_menu"><a href="/organization">{props.menu2}</a></li>
-            <li className="innerMenu_menu"><a href="#">{props.menu3}</a></li>
+            <li className="innerMenu_menu"><a href="/contact">{props.menu3}</a></li>
           </div>
         </ul>
     </div>

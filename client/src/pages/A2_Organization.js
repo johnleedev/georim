@@ -13,12 +13,17 @@ function A2_Organization(props) {
       {/* Haeder */}
       <Header></Header>
 
+      {/* InnerMenu */}
+
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0 }}>
       <InnerMenu 
       title1="기업정보" title2="조직도" // title2 수정하기
       menu1="회사소개" menu2="조직도" menu3="오시는길" 
       ></InnerMenu>
       </motion.div>
+
+
+      {/* Content */}
 
       <section className="organization">
         
@@ -60,10 +65,10 @@ function A2_Organization(props) {
             <div className="organization_box">(주)나비디엔씨</div>
             <div className="organization_line"></div>
             <div className="organization_box">(주)나비산업</div>
-            <div className="organization_line"></div>
+            {/* <div className="organization_line"></div>
             <div className="organization_box">(주)스파르타</div>
             <div className="organization_line"></div>
-            <div className="organization_box">(주)NS개발</div>
+            <div className="organization_box">(주)NS개발</div> */}
           </div>
         </div>
         </motion.div>

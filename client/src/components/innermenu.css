@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Source Sans Pro', sans-serif;
+  box-shadow: 1px 1px 1px #c9c9c9;
 }
 .innerMenu_cover {
   width: 100%;
