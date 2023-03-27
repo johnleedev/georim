@@ -20,8 +20,8 @@ function Header () {
           <div className={classnames('menu_title', show)}>
             <li className="menu_title_eg"><a href="/info">Information</a></li>
             <li className="menu_title_ko"><a href="/info">기업정보</a></li>
-            <li className="menu_title_eg"><a href="#">People</a></li>
-            <li className="menu_title_ko"><a href="#">기업목표</a></li>
+            <li className="menu_title_eg"><a href="/purpose">People</a></li>
+            <li className="menu_title_ko"><a href="/purpose">기업목표</a></li>
             <li className="menu_title_eg"><a href="#">Principle</a></li>
             <li className="menu_title_ko"><a href="#">기업신념</a></li>
             <li className="menu_title_eg"><a href="#">Focus</a></li>
@@ -34,14 +34,14 @@ function Header () {
         <div className="submenu">
           <div className="submenu_title">
             <li>
-              <a href="info">회사소개</a>
-              <a href="organization">조직도</a>
-              <a href="contact">오시는길</a>
+              <a href="/info">회사소개</a>
+              <a href="/organization">조직도</a>
+              <a href="/contact">오시는길</a>
             </li>
             <li>
-              <a href="#">인권존중</a>
-              <a href="#">인재양성</a>
-              <a href="#">사회공헌</a>
+              <a href="/purpose">인권존중</a>
+              <a href="/people">인재양성</a>
+              <a href="/charity">사회공헌</a>
             </li>
             <li>
               <a href="#">리더메시지</a>
