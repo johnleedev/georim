@@ -19,12 +19,14 @@
   align-items: center;
 }
 .innerMenu .innerMenu_titlebox {
-  width: 200px;
+  width: 300px;
   height: 100px;
-  
 }
 .innerMenu .innerMenu_titlebox .innerMenu_title {
-  width: 198px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
   height: 48px;
   display: flex;
   justify-content: center;

@@ -19,6 +19,7 @@ function A3_Contact(props) {
       {/* InnerMenu */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0 }}>
       <InnerMenu 
+      link1="info" link2="organization" link3="contact"
       title1="기업정보" title2="오시는길" // title2 수정하기
       menu1="회사소개" menu2="조직도" menu3="오시는길" 
       ></InnerMenu>

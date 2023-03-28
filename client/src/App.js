@@ -10,6 +10,9 @@ import A3_Contact from './pages/A3_Contact';
 import B1_Purpose from './pages/B1_Purpose';
 import B2_People from './pages/B2_People';
 import B3_Chrity from './pages/B3_Charity';
+import C1_Massege from './pages/C1_Massege';
+import C2_Obligation from './pages/C2_Obligation';
+import C3_Ethics from './pages/C3_Ethics';
 
 
 function App() {
@@ -26,6 +29,11 @@ function App() {
           <Route path="/purpose" element={<B1_Purpose></B1_Purpose>}/>
           <Route path="/people" element={<B2_People></B2_People>}/>
           <Route path="/charity" element={<B3_Chrity></B3_Chrity>}/>
+
+          <Route path="/massege" element={<C1_Massege></C1_Massege>}/>
+          <Route path="/obligation" element={<C2_Obligation></C2_Obligation>}/>
+          <Route path="/ethics" element={<C3_Ethics></C3_Ethics>}/>
+          
 
         </Routes>
       </AnimatePresence>

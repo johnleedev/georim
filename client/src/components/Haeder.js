@@ -22,8 +22,8 @@ function Header () {
             <li className="menu_title_ko"><a href="/info">기업정보</a></li>
             <li className="menu_title_eg"><a href="/purpose">People</a></li>
             <li className="menu_title_ko"><a href="/purpose">기업목표</a></li>
-            <li className="menu_title_eg"><a href="#">Principle</a></li>
-            <li className="menu_title_ko"><a href="#">기업신념</a></li>
+            <li className="menu_title_eg"><a href="/massege">Principle</a></li>
+            <li className="menu_title_ko"><a href="/massege">기업신념</a></li>
             <li className="menu_title_eg"><a href="#">Focus</a></li>
             <li className="menu_title_ko"><a href="#">기업활동</a></li>
             <li className="menu_title_eg"><a href="#">Advertisement</a></li>
@@ -44,9 +44,9 @@ function Header () {
               <a href="/charity">사회공헌</a>
             </li>
             <li>
-              <a href="#">리더메시지</a>
-              <a href="#">사회적책임</a>
-              <a href="#">윤리경영</a>
+              <a href="/massege">리더메시지</a>
+              <a href="/obligation">사회적책임</a>
+              <a href="/ethics">윤리경영</a>
             </li>
             <li>
               <a href="#">개발·시행</a>
