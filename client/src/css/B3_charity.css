@@ -1,0 +1,93 @@
+.charity {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: fit-content;
+  font-family: 'NanumSquare';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.charity .maincover {
+  max-width: 1200px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+.charity .cover {
+  width: 500px;
+  height: 700px;
+  border-radius: 5px;
+}
+.charity .ver_cover1 {
+  height: 700px;
+}
+.charity .ver_cover1 img {
+  width: 90%;
+}
+.charity .ver_cover2 {
+  height: 700px;
+}
+.charity .ver_cover2 .textbox {
+  width: 100%;
+  padding-top: 50px;
+}
+.charity .ver_cover2 .box1 {
+  height: 150px;
+}
+.charity .ver_cover2 .box2 {
+  height: 150px;
+}
+.charity .ver_cover2 .box3 {
+  height: 200px;
+}
+.charity .ver_cover2 .textbox .text{
+  width: 500px;
+  height: 30px;
+  margin-left: 50px;
+}
+.charity .ver_cover2 .textbox .text1 {
+  font-weight: 600;
+}
+.charity .ver_cover2 .textbox .text2 {
+  font-size: 14px;
+}
+/* images */
+.charity .ver_cover2 .textbox .images {
+  width: 500px;
+  height: 100px;
+}
+.charity .ver_cover2 .textbox .images img {
+  height: 30px;
+  margin: 10px;
+}
+.charity .ver_cover2 .textbox .images img:first-child {
+  height: 22px;
+  margin: 10px;
+}
+
+@media screen and (max-width : 768px){
+  .contact {
+    
+  }
+  .charity .cover {
+    width: 400px;
+  }
+  .charity .ver_cover1 .imagebox {
+    display: flex;
+    justify-content: center;
+  }
+  .charity .ver_cover2 .textbox {
+    height: 250px;
+  }
+  .charity .ver_cover2 .textbox .text{
+    width: 300px;
+    height: 70px;
+    line-height: 30px;
+  }
+}  

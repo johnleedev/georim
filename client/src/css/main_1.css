@@ -1,9 +1,11 @@
 .body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'NanumSquare';
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
+
+
 
 /* 메인 뒷배경 */
 .main_back_img {
@@ -19,8 +21,9 @@
 /* first view  */
 .first {
   position: relative;
-  top: 0;
   left: 0;
+  right: 0;
+  margin: auto;
   width: 100vw;
   height: 100vh;
 }
@@ -28,17 +31,19 @@
 /* youtube 영상 */
 .main_video {
   position: absolute;
-  top: 0;
   left: 0;
+  right: 0;
+  margin: auto;
   width: 100vw;
   height: 100%;
   overflow: hidden;
 }
 .main_video .youtube_area {
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100vw;
+  right: 0;
+  margin: auto;
+  width: 100%;
   min-width: 1800px;
 }
 /* 가상 선택자 */
@@ -52,8 +57,9 @@
 } 
 .main_video .youtube_cover {
   position: absolute;
-  top: 0;
   left: 0;
+  right: 0;
+  margin: auto;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.3);
@@ -72,7 +78,9 @@
 
 
 /* main_notice */
-
+.main_cover {
+  
+}
 
 .main_empty {
 
@@ -80,32 +88,37 @@
 .main_notice {
   position: absolute;
   top: 400px;
+  left: 300px;
   width: inherit;
   height: 300px;
   z-index: 5;
-  font-weight: bold;
 }
 .main_cover .notice {
-  margin-left: 200px;
   color: white;
   margin-bottom: 10px;
 }
 .main_cover .notice1 {
-  font-size: 25px;
-  height: 80px;
+  font-size: 20px;
+  height: 30px;
   letter-spacing: 5px;
-  text-decoration: underline;
 }
 .main_cover .notice2 {
-  height: 60px;
+  height: 40px;
   font-size: 40px;
 }
 .main_cover .notice3 {
-  font-size: 65px;
+  font-size: 40px;
 }
 
 
 @media screen and (max-width : 1200px) { 
+  #player {
+    left: -300px;
+  }
+
+  .main_notice {
+    left: 50px;
+  }
   .main_back_img img {
     height: 100vh;
   }
@@ -119,6 +132,7 @@
   .main_cover .main_notice .notice {
     margin-left: 150px;
   }
+
   
 }
 
@@ -129,13 +143,16 @@
   .main_video {
     height: 100vh;
   }
+  #player {
+    left: -600px;
+  }
   
   .main_cover .main_notice {
     top: 200px;
     height: 300px;
   }
   .main_cover .main_notice .notice {
-    margin-left: 50px;
+    margin-left: 10px;
   }
 
   .main_cover .main_notice .notice1 {
@@ -150,5 +167,6 @@
   .main_cover .main_notice .notice3 {
     font-size: 30px;
   }
+
   
 }

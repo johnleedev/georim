@@ -1,53 +1,86 @@
 .contact {
   width: 100%;
 }
-.contact_box1 {
+.contact .box1 {
   width: 100%;
   height: 80px;
 }
-.contact_box2 {
+.contact .box2 {
   width: 100%;
   margin-bottom: 50px;
 }
-.contact_map_wrap {
+.contact .wrap {
   width: 1000px;
   left: 0;
   right: 0;
   margin: auto;
   display: flex;
 }
-.contact_map_content {
+.contact .content {
   left: 0;
   right: 0;
   margin: auto;
   width: 480px;
 }
-.contact_map_wrap .content_left {
-  width: 900px;
+.contact .wrap .left {
+  width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 50px;
   box-shadow: 5px 5px 5px #c9c9c9;
 }
-.contact_map_wrap .content_left img {
-  width: 650px;
+.contact .wrap .left img {
+  width: 700px;
 }
-.contact_map_wrap .content_right {
+.contact .wrap .right {
   width: 380px;
+  padding-top: 20px;
 }
-.contact_map_button_wrap {
+.contact .wrap .right .title img {
+  margin-left: 15px;
+  width: 200px;
+}
+.contact .wrap .right .textbox {
+  height: 350px;
+}
+
+.contact .notice_wrap {
+  width: 100%;
+  font-size: 22px;
+}
+.contact .notice {
+  margin-top: 25px;
+  width: 450px;
+  padding-left: 20px;
+}
+.contact .notice_name {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.contact .notice_text {
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  line-height: 30px;
+}
+
+.contact .button_wrap {
   width: 100%;
   height: 50px;
   display: flex;
 }
-.contact_map_button_wrap a {
+.contact .button_wrap a {
   margin: 0 10px;
   text-decoration: none;
   color: black;
 }
 
-.contact_map_button {
+.contact .button {
   left: 0;
   right: 0;
   margin: auto;
@@ -58,21 +91,19 @@
   align-items: center;
   justify-content: center;
 }
-.contact_map_button.btn1 {
-  background-color: rgb(250, 250, 17);
+.contact .button.btn1,
+.contact .button.btn2 {
+  background-color: rgb(231, 231, 231);
 }
-.contact_map_button.btn2 {
-  background-color: rgb(3, 251, 36);
-}
-.contact_map_button:hover {
+.contact .button:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-.contact_map_button img {
+.contact .button img {
   width: 30px;
   margin-right: 10px;
 }
-.contact_map_button span {
+.contact .button span {
   width: 80px;
   height: 30px;
   font-weight: 700;
@@ -81,53 +112,35 @@
   align-items: center;
 }
 
-.contact_map_notice_wrap {
-  width: 100%;
-  height: 360PX;
-  font-size: 22px;
-}
-.contact_map_notice {
-  margin-top: 25px;
-  width: 450px;
-  height: 70px;
-  padding-left: 20px;
-}
-.contact_map_notice_name {
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-.contact_map_notice_text {
-  height: 50%;
-  display: flex;
-  justify-content: left;
-}
-
-@media screen and (max-width : 1000px){
+@media screen and (max-width : 1200px){
   .contact {
     width: 90%;
   }
-  .contact_box2 {
+  .contact .box2 {
     left: 0;
     right: 0;
     margin: auto;
     width: 70%;
   }
-  .contact_map_wrap {
+  .contact .wrap {
     display: block;
     width: 100%;
   }
-  .contact_map_content {
+  .contact .content {
     left: 0;
     right: 0;
     margin: auto;
     margin-bottom: 50px;
   }
-  .contact_map_content_image {
+  .contact .content_image {
 
+  }
+
+  .contact .wrap .left {
+    width: 700px;
+  }
+  .contact .wrap .left img {
+    width: 600px;
   }
 }
 
@@ -135,41 +148,39 @@
   .contact {
     width: 100%;
   }
-  .contact_box1 {
+  .contact .box1 {
     left: 0;
     right: 0;
     margin: auto;
     width: 90%;
     height: 80px;
   }
-  .contact_box2 {
+  .contact .box2 {
     left: 0;
     right: 0;
     margin: auto;
     width: 90%;
   }
-  .contact_map_wrap .content_left {
+  .contact .wrap .left {
     width: 100%;
   }
-  .contact_map_wrap .content_left img {
-    width: 400px;
-  }
-  .contact_map_wrap .content_right {
-    width: 100%;
-  }
-  .contact_map_button {
-    width: 140px;
-  }
-  .contact_map_content_image {
+  .contact .wrap .left img {
     width: 90%;
   }
-  .contact_map_button_wrap {
+  .contact .wrap .right {
+    width: 100%;
+  }
+  .contact .button {
+    width: 140px;
+  }
+
+  .contact .button_wrap {
     justify-content: center;
   }
-  .contact_map_notice_wrap {
+  .contact .notice_wrap {
     margin-left: 20px;
   }
-  .contact_map_notice_text {
+  .contact .notice_text {
     width: 300px;
     line-height: 30px;
   }
