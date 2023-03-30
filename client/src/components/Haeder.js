@@ -23,8 +23,8 @@ function Header () {
             <li className={classnames("menu_title_ko", menushow)}><a href="/info">기업정보</a></li>
             <li className={classnames("menu_title_eg", menushow)}><a href="/purpose">People</a></li>
             <li className={classnames("menu_title_ko", menushow)}><a href="/purpose">기업목표</a></li>
-            <li className={classnames("menu_title_eg", menushow)}><a href="/massege">Principle</a></li>
-            <li className={classnames("menu_title_ko", menushow)}><a href="/massege">기업신념</a></li>
+            <li className={classnames("menu_title_eg", menushow)}><a href="/message">Principle</a></li>
+            <li className={classnames("menu_title_ko", menushow)}><a href="/message">기업신념</a></li>
             <li className={classnames("menu_title_eg", menushow)}><a href="#">Focus</a></li>
             <li className={classnames("menu_title_ko", menushow)}><a href="#">기업활동</a></li>
             <li className={classnames("menu_title_eg", menushow)}><a href="#">Advertisement</a></li>
@@ -44,7 +44,7 @@ function Header () {
               <a className={classnames("submenu_link", menushow)} href="/charity">사회공헌</a>
             </li>
             <li>
-              <a className={classnames("submenu_link", menushow)} href="/massege">리더메시지</a>
+              <a className={classnames("submenu_link", menushow)} href="/message">리더메시지</a>
               <a className={classnames("submenu_link", menushow)} href="/obligation">사회적책임</a>
               <a className={classnames("submenu_link", menushow)} href="/ethics">윤리경영</a>
             </li>
