@@ -1,29 +1,50 @@
-import { React } from "react";
-import '../css/main_1.css'
-import '../css/main_2.css'
-import '../css/main_3.css'
-import forest2 from '../img/forest2.png'
+import { React, useRef, useEffect, useState } from "react";
+import { throttle } from "lodash";
+import { motion } from "framer-motion";
+import $ from 'jquery';
+import '../css/Format_basic.css'
+import '../css/main.css'
+import forest from '../img/forest.png'
 import ReactPlayer from 'react-player'
 import Header from '../components/Haeder'
 import Footer from '../components/Footer'
-import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBuilding, faCity, faHotel, faShop } from "@fortawesome/free-solid-svg-icons";
+
 
 function Main(props) {
 
-  
-  return (
-    <div className='body'>
+  // window.addEventListener("wheel", function(e){
+  //   e.preventDefault();
+  // },{passive : false});
 
+  // var mHtml = $("html");
+  // var page = 1;
+  
+  // // mHtml.animate({scrollTop : 0}, 10);
+
+  // $(window).on("wheel", function(e) {
+  //   if(mHtml.is(":animated")) return;
+  //   if(e.originalEvent.deltaY > 0) {
+  //       if(page == 4) return;
+  //       page++;
+  //   } else if(e.originalEvent.deltaY < 0) {
+  //       if(page == 1) return;
+  //       page--;
+  //   }
+  //   var posTop =(page-1) * $(window).height();
+  //   mHtml.animate({scrollTop : posTop});
+  // })
+  
+   
+  return (
+    <div className='main'>
+      
       {/* Haeder */}
       <Header></Header>
 
-      {/* main back image */}
-      <div className="main_back_img">
-        <img src={forest2}/>
-      </div>
-
       {/* first view */}
-      <section className="first">
+      <section className="first" id="first">
         <div class="main_video">
           <div class="youtube_area">
             <div id="player">
@@ -36,9 +57,7 @@ function Main(props) {
                 youtube: {
                   playerVars: { showinfo: 1 }
                 }
-              }}
-              
-              />
+              }}/>
             </div>
           </div>
           <div class="youtube_cover"></div>
@@ -47,98 +66,153 @@ function Main(props) {
           <div className="main_empty"></div>
           <div className="main_notice">
             <div className="notice notice1">Development & Construction</div>
-            <div className="notice notice2">대한민국의 가장 성공적인 프로젝트,</div>
-            <div className="notice notice3">거림이 만들어갑니다.</div>
+            <div className="notice notice2">프로젝트의 시작, 성공적인 마무리</div>
+            <div className="notice notice3">거림이 함께합니다.</div>
           </div>
         </div>  
-
-        
-      </section>
-
       
+      </section>
 
       {/* second view */}
-
-     
+    
       <section className="second">
-        <div className="cover cover1">
-          <div className="emptybox"></div>
-          <div className="titlebox">Vision</div>
-        </div>
-        <div className="cover cover2">
-          <div className="textbox">거림은 부동산 개발과 시행의 새로운 문화를 만들어 갑니다.</div>
-        </div>
-        <div className="cover cover3">
-          <div className="textbox">혁신은 일상에서 더 나은 미래를 만들어 가는 여정입니다.</div>
-          <div className="textbox">변화와 트렌드는 한순간에 일어나지 않습니다.</div>
-          <div className="textbox">매 순간의 작은 노력이 모여 창조적인 프로젝트를 만듭니다.</div>
-          <div className="textbox">거림은 모두가 꿈꾸는 혁신을 만들어 가겠습니다.</div>
-        </div>
-      </section>
-      
-      {/* third view */}
-      <section className="third">
-        <div className="cover cover1">
-          <div className="emptybox"></div>
-          <div className="titlebox">Business Sector</div>
-        </div>
-        <div className="cover cover2">
-          <div className="textbox">부동산 개발 시작부터 끝까지 창의적인 사고로 한발 앞서 시장을 이끌어갑니다.</div>
-        </div>
+        
+        <div className="maincover">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }}>
+          <div className="cover ver_cover1">
+            <div className="imagebox">
+              <img src={forest}/>
+            </div>
+          </div>
+          </motion.div>
 
-        <div className="cover cover3">
-          <div  className="cover">
-            <div className="contentbox box1">
-              <div className="text3">개발사업부문</div>
-              <div className="text4">Development</div>
-              <div className="innerbox1">
-                <div className="innerbox1_in">
-                  <div className="boxcontent">· 사업성 및 타당성 분석</div>
-                  <div className="boxcontent">· 개발계획 수립</div>
-                  <div className="boxcontent">· 자금조달 금융컨설팅</div>
-                  <div className="boxcontent">· 사업설계 및 인허가</div>
-                  <div className="boxcontent">· 시공사 선정 및 공정관리</div>
-                  <div className="boxcontent">· 준공 및 사업 정산 정리</div>
-                </div>
-              </div>
-              <div className="innerbox2"></div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}>
+          <div className="cover ver_cover2">
+            <div className="textbox box1">
+              <div className="text text1 title">Vision</div>
             </div>
-            <div className="contentbox box2">
-              <div className="text3">분양사업부문</div>
-              <div className="text4">House for Installment Sale</div>
-              <div className="innerbox1">
-                <div className="innerbox1_in">
-                  <div className="boxcontent">· 부동산 시장 조사</div>
-                  <div className="boxcontent">· 분양 환경 분석</div>
-                  <div className="boxcontent">· 분양 계획</div>
-                  <div className="boxcontent">· 분양 결과 분석</div>
-                  <div className="boxcontent">· 분양 마케팅</div>
-                </div>
-              </div>
-              <div className="innerbox2"></div>
+            <div className="textbox box2">
+              <div className="text text1">거림은 부동산의 새로운 문화를 만들어 갑니다.</div>
+              <div className="text text2">혁신은 일상에서 더 나은 미래를 만들어 가는 여정입니다.</div>
+              <div className="text text2">변화와 트렌드는 한순간에 일어나지 않습니다.</div>
+              <div className="text text2">매 순간의 작은 노력이 모여 창조적인 프로젝트를 만듭니다.</div>
+              <div className="text text2">거림은 모두가 꿈꾸는 혁신을 만들어가겠습니다.</div>
             </div>
-            <div className="contentbox box3">
-              <div className="text3">입주사업부문</div>
-              <div className="text4">Moving Management</div>
-              <div className="innerbox1">
-                <div className="innerbox1_in">
-                  <div className="boxcontent">· 입주 촉진 업무</div>
-                  <div className="boxcontent">· 계약자 관리</div>
-                  <div className="boxcontent">· 임대인 알선</div>
-                  <div className="boxcontent">· 입주 지원 센터 운영</div>
-                  <div className="boxcontent">· 해약 세대 관리</div>
-                </div>
+          </div>
+          </motion.div>    
+        </div>
+      </section> 
+
+
+
+      {/* third view */}
+
+      {/* <section className="third"> 
+        <div className="cover3">
+          <div className="cont_box">
+            <div className="cont_cov"></div>
+            <div className="cont_text">
+              <div className="cont_text1">
+                <FontAwesomeIcon icon={faBuilding} size="3x"/>
               </div>
-              <div className="innerbox2"></div>
+              <div className="cont_text2">총 분양현장</div>
+              <div className="cont_text3">81<span>개</span></div>
+            </div>
+          </div>
+          <div className="w_box none"></div>
+          <div className="cont_box">
+            <div className="cont_cov"></div>
+            <div className="cont_text">
+              <div className="cont_text1">
+                <FontAwesomeIcon icon={faHotel} size="3x"/>
+              </div>
+              <div className="cont_text2">공동주택</div>
+              <div className="cont_text3">1,501<span>세대</span></div>
+            </div>
+          </div>
+          <div className="w_box"></div>
+          <div className="cont_box">
+            <div className="cont_cov"></div>
+            <div className="cont_text">
+              <div className="cont_text1">
+                <FontAwesomeIcon icon={faCity} size="3x"/>
+              </div>
+              <div className="cont_text2">오피스텔/도시형생활주택</div>
+              <div className="cont_text3">13,248<span>개</span></div>
+            </div>
+          </div>
+          <div className="w_box none"></div>
+          <div className="cont_box">
+            <div className="cont_cov"></div>
+            <div className="cont_text">
+              <div className="cont_text1">
+                <FontAwesomeIcon icon={faShop} size="3x"/>
+              </div>
+              <div className="cont_text2">상업시설/지식산업센터</div>
+              <div className="cont_text3">1,881<span>호실</span></div>
             </div>
           </div>
         </div>
+      </section>  */}
+
+
+      
+      {/* fourth view */}
+      <section className="fourth">
+        <div className="cover4">
+          <div className="contentbox box1">
+            <div className="text3">개발사업부문</div>
+            <div className="text4">Development</div>
+            <div className="innerbox1">
+              <div className="innerbox1_in">
+                <div className="boxcontent">· 사업성 및 타당성 분석</div>
+                <div className="boxcontent">· 개발계획 수립</div>
+                <div className="boxcontent">· 자금조달 금융컨설팅</div>
+                <div className="boxcontent">· 사업설계 및 인허가</div>
+                <div className="boxcontent">· 시공사 선정 및 공정관리</div>
+                <div className="boxcontent">· 준공 및 사업 정산 정리</div>
+              </div>
+            </div>
+          </div>
+          <div className="contentbox box2">
+            <div className="text3">분양사업부문</div>
+            <div className="text4">House for Installment Sale</div>
+            <div className="innerbox1">
+              <div className="innerbox1_in">
+                <div className="boxcontent">· 부동산 시장 조사</div>
+                <div className="boxcontent">· 분양 환경 분석</div>
+                <div className="boxcontent">· 분양 계획</div>
+                <div className="boxcontent">· 분양 결과 분석</div>
+                <div className="boxcontent">· 분양 마케팅</div>
+              </div>
+            </div>
+          </div>
+          <div className="contentbox box3">
+            <div className="text3">입주사업부문</div>
+            <div className="text4">Moving Management</div>
+            <div className="innerbox1">
+              <div className="innerbox1_in">
+                <div className="boxcontent">· 입주 촉진 업무</div>
+                <div className="boxcontent">· 계약자 관리</div>
+                <div className="boxcontent">· 임대인 알선</div>
+                <div className="boxcontent">· 입주 지원 센터 운영</div>
+                <div className="boxcontent">· 해약 세대 관리</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="footer">
+          <Footer></Footer>
+        </div>
       </section>
 
-      {/* Footer */}
-      <Footer></Footer>
+      
 
     </div>
+    
+    
   );
 }
 

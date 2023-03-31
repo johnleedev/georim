@@ -7,7 +7,7 @@ import Main from './pages/Main';
 import A1_CompanyInfo from './pages/A1_CompanyInfo';
 import A2_Organization from './pages/A2_Organization';
 import A3_Contact from './pages/A3_Contact';
-import B1_Purpose from './pages/B1_Purpose';
+import B1_Respect from './pages/B1_Respect';
 import B2_People from './pages/B2_People';
 import B3_Chrity from './pages/B3_Charity';
 import C1_Message from './pages/C1_Message';
@@ -26,7 +26,7 @@ function App() {
           <Route path="/organization" element={<A2_Organization></A2_Organization>}/>
           <Route path="/contact" element={<A3_Contact></A3_Contact>}/>
 
-          <Route path="/purpose" element={<B1_Purpose></B1_Purpose>}/>
+          <Route path="/respect" element={<B1_Respect></B1_Respect>}/>
           <Route path="/people" element={<B2_People></B2_People>}/>
           <Route path="/charity" element={<B3_Chrity></B3_Chrity>}/>
 

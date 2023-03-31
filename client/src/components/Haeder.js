@@ -21,8 +21,8 @@ function Header () {
             onMouseEnter={()=>{setmenushow('show')}}>
             <li className={classnames("menu_title_eg", menushow)}><a href="/info">Information</a></li>
             <li className={classnames("menu_title_ko", menushow)}><a href="/info">기업정보</a></li>
-            <li className={classnames("menu_title_eg", menushow)}><a href="/purpose">People</a></li>
-            <li className={classnames("menu_title_ko", menushow)}><a href="/purpose">기업목표</a></li>
+            <li className={classnames("menu_title_eg", menushow)}><a href="/respect">People</a></li>
+            <li className={classnames("menu_title_ko", menushow)}><a href="/respect">기업목표</a></li>
             <li className={classnames("menu_title_eg", menushow)}><a href="/message">Principle</a></li>
             <li className={classnames("menu_title_ko", menushow)}><a href="/message">기업신념</a></li>
             <li className={classnames("menu_title_eg", menushow)}><a href="#">Focus</a></li>
@@ -39,7 +39,7 @@ function Header () {
               <a className={classnames("submenu_link", menushow)} href="/contact">오시는길</a>
             </li>
             <li>
-              <a className={classnames("submenu_link", menushow)} href="/purpose">인권존중</a>
+              <a className={classnames("submenu_link", menushow)} href="/respect">인권존중</a>
               <a className={classnames("submenu_link", menushow)} href="/people">인재양성</a>
               <a className={classnames("submenu_link", menushow)} href="/charity">사회공헌</a>
             </li>
