@@ -25,10 +25,10 @@ function Header () {
             <li className={classnames("menu_title_ko", menushow)}><a href="/respect">기업목표</a></li>
             <li className={classnames("menu_title_eg", menushow)}><a href="/message">Principle</a></li>
             <li className={classnames("menu_title_ko", menushow)}><a href="/message">기업신념</a></li>
-            <li className={classnames("menu_title_eg", menushow)}><a href="#">Focus</a></li>
-            <li className={classnames("menu_title_ko", menushow)}><a href="#">기업활동</a></li>
-            <li className={classnames("menu_title_eg", menushow)}><a href="#">Advertisement</a></li>
-            <li className={classnames("menu_title_ko", menushow)}><a href="#">무료광고</a></li>
+            <li className={classnames("menu_title_eg", menushow)}><a href="/development">Focus</a></li>
+            <li className={classnames("menu_title_ko", menushow)}><a href="/development">기업활동</a></li>
+            <li className={classnames("menu_title_eg", menushow)}><a href="/addcor">Advertisement</a></li>
+            <li className={classnames("menu_title_ko", menushow)}><a href="/addcor">무료광고</a></li>
           </div>
         </div>
         <div className={classnames("submenu", menushow)}>
@@ -49,14 +49,14 @@ function Header () {
               <a className={classnames("submenu_link", menushow)} href="/ethics">윤리경영</a>
             </li>
             <li>
-              <a className={classnames("submenu_link", menushow)} href="#">개발·시행</a>
-              <a className={classnames("submenu_link", menushow)} href="#">분양·입주</a>
-              <a className={classnames("submenu_link", menushow)} href="#">뉴스·비디오</a>
+              <a className={classnames("submenu_link", menushow)} href="/development">개발·시행</a>
+              <a className={classnames("submenu_link", menushow)} href="/distribution">분양·입주</a>
+              <a className={classnames("submenu_link", menushow)} href="/news">뉴스·비디오</a>
             </li>
             <li>
-              <a className={classnames("submenu_link", menushow)} href="#">법인사업자</a>
-              <a className={classnames("submenu_link", menushow)} href="#">개인사업자</a>
-              <a className={classnames("submenu_link", menushow)} href="#">일반개인</a>
+              <a className={classnames("submenu_link", menushow)} href="/addcor">법인사업자</a>
+              <a className={classnames("submenu_link", menushow)} href="/addper">개인사업자</a>
+              <a className={classnames("submenu_link", menushow)} href="/addpriv">일반개인</a>
             </li>
             <li className="shownone"></li>
           </div>

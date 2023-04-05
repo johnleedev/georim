@@ -228,7 +228,6 @@
 .main .fourth .cover4 .box1:hover,
 .main .fourth .cover4 .box2:hover,
 .main .fourth .cover4 .box3:hover{
-  color: black;
   transform: translate(0, -15px);
   transition: all 0.3s;
   text-shadow: none;
@@ -317,12 +316,19 @@
   }
   
  /* 1200 third ------------------------------------- */
-  .main .third .cover3 {
-   background-color: red;
+  .main .third {
+    height: fit-content;
   }
-
+  .main .third .cover3 {
+   width: 90%;
+   height: 800px;
+  }
   .main .third .cover3 .none {
     display: none;
+  }
+  .main .third .cover3 .cont_box {
+    height: fit-content;
+    flex-wrap: wrap;
   }
 
  
@@ -385,7 +391,12 @@
 
 
   /* third 768 ------------------------------------- */
-
+  .main .third .cover3 {
+   height: 1400px;
+  }
+  .main .third .cover3 .cont_box {
+    width: 90%;
+  }
 
 
   /* fourth 768 ------------------------------------- */

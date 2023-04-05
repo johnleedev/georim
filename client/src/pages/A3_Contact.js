@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import map from '../img/map.png';
 import kakaomap from '../img/kakaomap.png';
 import navermap from '../img/navermap.png';
-import title2 from '../img/title2.png'
+import title3 from '../img/title3.png'
+import sevenlogo from '../img/sevenlogo.png'
 
 function A3_Contact(props) {
   return (
@@ -45,18 +46,18 @@ function A3_Contact(props) {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}>
             <div className='content right'>
               <div className='notice_wrap title'>
-                <img src={title2}/>
+                <img src={title3}/>
               </div>
               <div className='notice_wrap textbox'>
                 <div className='notice'>
                   <div className='notice_name'>ADDRESS</div>
                   <div className='notice_text'>대구 수성구 청수로 26길 46</div>
-                  <div className='notice_text'>1층 세븐일레븐 N플레이스빌딩 주차 건물 서측 지하1~2층</div>
+                  <div className='notice_text seven'><img src={sevenlogo}/>1층 세븐일레븐 N플레이스빌딩 / 주차: 건물 서측 지하1~2층</div>
                 </div>
                 <div className='notice'>
                   <a href='tel:1577-7493'>
                   <div className='notice_name'>CONTACT</div>
-                  <div className='notice_text'>1577-7493</div>
+                  <div className='notice_text tel'>1577-7493</div>
                   <div className='notice_text'>09:30 ~ 18:00</div>
                   </a>
                 </div>

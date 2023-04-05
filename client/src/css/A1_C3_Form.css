@@ -1,0 +1,154 @@
+.companyinfo,
+.respect,
+.people,
+.charity,
+.message, 
+.obligation,
+.ethics {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  font-family: 'NanumSquare';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* companyinfo */
+.companyinfo .maincover .cover .box1 {
+  height: 100px;
+}
+.companyinfo .maincover .cover .box1 .text1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.companyinfo .maincover .cover .box2 .text2 {
+  font-size: 16px;
+}
+.companyinfo .maincover .cover .box2 .text2 span {
+  font-weight: 700;
+}
+.companyinfo .maincover .cover .box3 {
+  
+}
+.companyinfo .maincover .cover .box3 .text2 {
+  height: 60px;
+}
+
+/* charity images*/
+.charity .ver_cover2 .textbox .images {
+  width: 500px;
+  height: 100px;
+}
+.charity .ver_cover2 .textbox .images img {
+  height: 30px;
+  margin: 10px;
+}
+.charity .ver_cover2 .textbox .images img:first-child {
+  height: 22px;
+  margin: 10px;
+}
+
+
+/* message images */
+.message .ver_cover2 .textbox .img{
+  width: 500px;
+  height: 50px;
+  margin-left: 50px;
+}
+.message .ver_cover2 .textbox .img1 img{
+  width: 70px;
+}
+.message .ver_cover2 .textbox .img2 img{
+  width: 400px;
+}
+.message .ver_cover2 .textbox .img3 {
+  width: 200px;
+}
+.message .ver_cover2 .textbox .img3 img{
+  width: 100px;
+  margin: 0 20px;
+}
+
+
+/* obligation */
+.obligation .ver_cover2 .box1 {
+  height: 180px;
+}
+.obligation .ver_cover2 .box2 {
+  height: 180px;
+}
+
+@media screen and (max-width : 768px){
+  /* companyinfo */
+  .companyinfo .maincover .ver_cover1 {
+    height: 600px;
+  }
+  .companyinfo .maincover .ver_cover2 {
+    height: 800px;
+  }
+  .companyinfo .maincover .cover .box1 {
+    height: 200px;
+  }
+  .companyinfo .maincover .cover .box3 {
+    
+  }
+
+  /* charity */
+  .charity .ver_cover1 .imagebox {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .charity .ver_cover2 .textbox .text{
+    width: 300px;
+    height: 70px;
+    line-height: 30px;
+  }
+
+  /* message */
+  .message .ver_cover1 .imagebox {
+    display: flex;
+    justify-content: center;
+  }
+  .message .ver_cover2 {
+    height: fit-content;
+  }
+  .message .ver_cover2 .box1 {
+    height: 130px;
+  }
+  .message .ver_cover2 .box1 .img1 img {
+    width: 60px;
+  }
+  .message .ver_cover2 .box1 .img2 img {
+    width: 300px;
+  }
+  .message .ver_cover2 .box2 {
+    height: 300px;
+  }
+  .message .ver_cover2 .box3 {
+    height: 170px;
+    padding: 10px 0;
+  }
+  .message .ver_cover2 .box4 {
+    height: 200px;
+  }
+
+  /* obligation */
+  .obligation .ver_cover2 {
+    height: 800px;
+  }
+  .obligation .ver_cover2 .box1 {
+    height: 270px;
+  }
+  .obligation .ver_cover2 .box2 {
+    height: 230px;
+  }
+  .obligation .ver_cover2 .box3 {
+    height: 200px;
+  }
+}  

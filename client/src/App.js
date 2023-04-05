@@ -13,12 +13,19 @@ import B3_Chrity from './pages/B3_Charity';
 import C1_Message from './pages/C1_Message';
 import C2_Obligation from './pages/C2_Obligation';
 import C3_Ethics from './pages/C3_Ethics';
+import D1_Development from './pages/D1_Development';
+import D2_Distribution from './pages/D2_Distribution';
+import D3_News from './pages/D3_News';
+import E1_Add_cor from './pages/E1_Add_cor';
+import E2_Add_per from './pages/E2_Add_per';
+import E3_Add_priv from './pages/E3_Add_priv';
 
 
 function App() {
   return (
     <div className="App">
       <AnimatePresence>
+        
         <Routes>
           <Route path="/" element={<Main></Main>}/>
 
@@ -34,7 +41,13 @@ function App() {
           <Route path="/obligation" element={<C2_Obligation></C2_Obligation>}/>
           <Route path="/ethics" element={<C3_Ethics></C3_Ethics>}/>
 
+          <Route path="/development" element={<D1_Development></D1_Development>}/>
+          <Route path="/distribution" element={<D2_Distribution></D2_Distribution>}/>
+          <Route path="/news" element={<D3_News></D3_News>}/>
          
+          <Route path="/addcor" element={<E1_Add_cor></E1_Add_cor>}/>
+          <Route path="/addper" element={<E2_Add_per></E2_Add_per>}/>
+          <Route path="/addpriv" element={<E3_Add_priv></E3_Add_priv>}/>
 
         </Routes>
       </AnimatePresence>

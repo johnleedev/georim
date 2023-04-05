@@ -14,27 +14,27 @@ import { faBuilding, faCity, faHotel, faShop } from "@fortawesome/free-solid-svg
 
 function Main(props) {
 
-  // window.addEventListener("wheel", function(e){
-  //   e.preventDefault();
-  // },{passive : false});
+  window.addEventListener("wheel", function(e){
+    e.preventDefault();
+  },{passive : false});
 
-  // var mHtml = $("html");
-  // var page = 1;
+  var mHtml = $("html");
+  var page = 1;
   
-  // // mHtml.animate({scrollTop : 0}, 10);
+  mHtml.animate({scrollTop : 0}, 10);
 
-  // $(window).on("wheel", function(e) {
-  //   if(mHtml.is(":animated")) return;
-  //   if(e.originalEvent.deltaY > 0) {
-  //       if(page == 4) return;
-  //       page++;
-  //   } else if(e.originalEvent.deltaY < 0) {
-  //       if(page == 1) return;
-  //       page--;
-  //   }
-  //   var posTop =(page-1) * $(window).height();
-  //   mHtml.animate({scrollTop : posTop});
-  // })
+  $(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 4) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+  })
   
    
   return (
@@ -43,7 +43,7 @@ function Main(props) {
       {/* Haeder */}
       <Header></Header>
 
-      {/* first view */}
+      {/* first view --------------------------------------------------------------------------------  */}
       <section className="first" id="first">
         <div class="main_video">
           <div class="youtube_area">
@@ -73,7 +73,7 @@ function Main(props) {
       
       </section>
 
-      {/* second view */}
+      {/* second view -------------------------------------------------------------------------------- */}
     
       <section className="second">
         
@@ -105,9 +105,9 @@ function Main(props) {
 
 
 
-      {/* third view */}
+      {/* third view -------------------------------------------------------------------------------- */}
 
-      {/* <section className="third"> 
+      <section className="third"> 
         <div className="cover3">
           <div className="cont_box">
             <div className="cont_cov"></div>
@@ -130,7 +130,7 @@ function Main(props) {
               <div className="cont_text3">1,501<span>세대</span></div>
             </div>
           </div>
-          <div className="w_box"></div>
+          <div className="w_box none"></div>
           <div className="cont_box">
             <div className="cont_cov"></div>
             <div className="cont_text">
@@ -138,7 +138,7 @@ function Main(props) {
                 <FontAwesomeIcon icon={faCity} size="3x"/>
               </div>
               <div className="cont_text2">오피스텔/도시형생활주택</div>
-              <div className="cont_text3">13,248<span>개</span></div>
+              <div className="cont_text3">13,248<span>세대</span></div>
             </div>
           </div>
           <div className="w_box none"></div>
@@ -153,11 +153,11 @@ function Main(props) {
             </div>
           </div>
         </div>
-      </section>  */}
+      </section> 
 
 
       
-      {/* fourth view */}
+      {/* fourth view --------------------------------------------------------------------------------  */}
       <section className="fourth">
         <div className="cover4">
           <div className="contentbox box1">

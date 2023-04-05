@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Format_basic.css'
-import '../css/B1_C3_Form.css'
+import '../css/A1_C3_Form.css'
 import Header from '../components/Haeder';
 import Footer from '../components/Footer';
 import InnerMenu from '../components/InnerMenu';
@@ -53,18 +53,6 @@ function C3_Ethics(props) {
               </div>
             </div>
             </motion.div>
-
-
-            
-
-
-
-
-
-
-
-
-
 
           
           </div>

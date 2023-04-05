@@ -1,0 +1,39 @@
+.prepare_content {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'NanumSquare';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.prepare_content .prepare_content_cover1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prepare_content .prepare_content_cover1 img {
+  width: 70%;
+}
+
+.prepare_content .prepare_content_cover2 {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.prepare_content .prepare_content_cover2 span {
+  font-size: 20px;
+  font-weight: 600;
+  height: 80px;
+}
+.prepare_content .prepare_content_cover2 p {
+  height: 70px;
+  line-height: 30px;
+}

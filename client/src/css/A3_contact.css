@@ -39,7 +39,7 @@
 }
 .contact .wrap .right .title img {
   margin-left: 15px;
-  width: 200px;
+  width: 250px;
 }
 .contact .wrap .right .textbox {
   height: 350px;
@@ -67,6 +67,18 @@
   display: flex;
   justify-content: left;
   line-height: 30px;
+}
+.contact .box2 .right .notice .seven {
+  font-size: 16px;
+}
+.contact .box2 .right .notice .notice_text img {
+  width: 25px;
+  height: 25px;
+  display: inline;
+}
+.contact .box2 .right .notice .tel {
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .contact .button_wrap {
