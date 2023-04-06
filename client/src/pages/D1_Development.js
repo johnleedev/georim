@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useRef, useState } from "react";
+import { useSelector } from "react-redux"
 import Header from '../components/Haeder';
 import Footer from '../components/Footer';
 import InnerMenu from '../components/InnerMenu';
 import { motion } from "framer-motion";
-import '../css/prepare.css'
-import prepare2 from '../img/prepare2.png'
+import '../css/D1_D3_Form.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function D1_Development(props) {
+
+  let state = useSelector((state) => { return state } )
+
   return (
     <div>
 
@@ -25,21 +33,60 @@ function D1_Development(props) {
 
       {/* Content */}
 
-      <section className='prepare_content'>
-
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }}>        
-        <div className='prepare_content_cover1'>
-          <img src={prepare2} />
+      <section className='dev'>
+         
+        <div className='main_box1'>
+          <div className='text'>총 개발·시행 사업 {state.develop.length}건</div>
+          <div className='bar'></div>
         </div>
-        </motion.div>
 
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}>        
-        <div className='prepare_content_cover2'>
-          <span>서비스 준비중 입니다.</span>
-          <p>현재 서비스 제공을 위하여 페이지 준비중에 있습니다.</p>
-          <p>감사합니다.</p>
-        </div>
-        </motion.div>
+        <Swiper 
+          slidesPerView={3}
+          centeredSlides={true}
+          spaceBetween={10}
+          pagination={{ type: "fraction"}}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="swiper"
+        >
+          {
+            state.develop.map((a, i)=>{
+              return (
+                <SwiperSlide className="slide">
+                  <div className="content">
+                    <div className="img"><img src={`${state.develop[i].img}`}></img></div>
+                    <div className="text">
+                      <div className="title">{state.develop[i].name}</div>
+                      <div className="textbox">
+                        <div className="textbox1 boxes">
+                          <div className="letter2">주      소</div>
+                          <div className="letter2">구      분</div>
+                          <div className="letter3">세   대   수</div>
+                          <div className="letter2">규      모</div>
+                          <div>사업시기</div>
+                        </div>
+                        <div className="textbox2 boxes">
+                          <div>:</div>
+                          <div>:</div>
+                          <div>:</div>
+                          <div>:</div>
+                          <div>:</div>
+                        </div>
+                        <div className="textbox3 boxes">
+                          <div>{state.develop[i].주소}</div>
+                          <div>{state.develop[i].구분}</div>
+                          <div>{state.develop[i].호실수}</div>
+                          <div>{state.develop[i].규모}</div>
+                          <div>{state.develop[i].준공시기}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )
+            })
+          }
+        </Swiper>
 
       </section>
 
