@@ -26,7 +26,7 @@ function A2_Organization(props) {
 
       {/* Content */}
 
-      <section className="organization">
+      {/* <section className="organization">
         
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }}>
         <div className="cover cover1">
@@ -72,16 +72,13 @@ function A2_Organization(props) {
               <div className="box">(주)나비디엔씨</div>
               <div className="line"></div>
               <div className="box">(주)나비산업</div>
-              {/* <div className="line"></div>
-              <div className="box">(주)스파르타</div>
-              <div className="line"></div>
-              <div className="box">(주)NS개발</div> */}
+              
             </div>
           </div>
         </div>
         </motion.div>
 
-      </section>
+      </section> */}
 
 
       {/* Footer */}

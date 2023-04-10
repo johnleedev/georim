@@ -16,6 +16,58 @@
   
 }
 
+/* popup --------------------------------------- */
+.main .popup {
+  position: fixed;
+  top: 90px;
+  left: calc(100vw/2);
+  width: 300px;
+  height: fit-content;
+  background-color: white;
+  z-index: 9;
+  display: none;
+}
+.main .popup.show {
+  display: block;
+}
+
+.main .popup .content {
+  width: 300px;
+  height: fit-content;
+}
+.main .popup .content img {
+  width: 100%;
+}
+.main .popup .close {
+  width: 300px;
+  height: 30px;
+  display: flex;
+}
+.main .popup .close .close_textbox {
+  width: 270px;
+  height: 30px;
+}
+.main .popup .close .close_textbox .close_text {
+  margin: 5px 0 0 10px;
+  width: 270px;
+}
+.main .popup .close .close_textbox .close_text:hover {
+  cursor: pointer;
+}
+.main .popup .close .close_button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .popup .close .close_button button {
+  width: 20px;
+  height: 20px;
+}
+.main .popup .close .close_button button:hover {
+  cursor: pointer;
+}
 /* first view ---------------------------- */
 
 .main .first {
@@ -278,7 +330,13 @@
 }
 
 
+
+
+
 @media screen and (max-width : 1200px) { 
+  .main .popup {
+    left: 0px;
+  }    
   .main #player {
     left: -300px;
   }

@@ -1,10 +1,12 @@
 import { React, useRef, useEffect, useState } from "react";
 import { throttle } from "lodash";
 import { motion } from "framer-motion";
+import classnames from 'classnames';
 import $ from 'jquery';
 import '../css/Format_basic.css'
 import '../css/main.css'
 import forest from '../img/forest.png'
+import popup1 from '../img/popup1.jpg'
 import ReactPlayer from 'react-player'
 import Header from '../components/Haeder'
 import Footer from '../components/Footer'
@@ -35,7 +37,25 @@ function Main(props) {
     var posTop =(page-1) * $(window).height();
     mHtml.animate({scrollTop : posTop});
   })
+
+
+  // popup //
+  const [showPopup, setShowPopup] = useState('');
+  const HOME_VISITED = localStorage.getItem("homeVisited"); // localStorage에 homeVisited 조회
   
+  useEffect(() => {
+    const today = new Date();
+    const handleMainPop = () => {
+      if (HOME_VISITED && HOME_VISITED > today) { // 현재 date가 localStorage의 시간보다 크면 return
+        return
+      }
+       if (!HOME_VISITED || HOME_VISITED < today) { // 저장된 date가 없거나 today보다 작다면 popup 노출
+        setShowPopup('show')
+      }
+    };
+    window.setTimeout(handleMainPop, 1000); // 1초 뒤 실행
+  }, [HOME_VISITED]);
+
    
   return (
     <div className='main'>
@@ -70,6 +90,30 @@ function Main(props) {
             <div className="notice notice3">거림이 함께합니다.</div>
           </div>
         </div>  
+
+        {/* popup */}
+        <div className={classnames('popup', showPopup)}  id="popup">
+          <div className="content">
+            <img src={popup1}/>
+          </div>
+          <div className="close">
+            <div className="close_textbox">
+              <div className="close_text" onClick={()=>{
+                  let expires = new Date();
+                  expires = expires.setHours(expires.getHours() + 24);
+                  localStorage.setItem("homeVisited", expires);
+                  $("#popup").fadeOut();  
+                }}>24시간 동안 열지 않기</div>
+            </div>
+            <div className="close_button">
+              <button className="close_button" onClick={()=>{
+                $("#popup").fadeOut();
+              }}>X</button>
+            </div>
+            
+          </div>
+        </div>
+
       
       </section>
 
@@ -208,7 +252,7 @@ function Main(props) {
         </div>
       </section>
 
-      
+   
 
     </div>
     

@@ -1,6 +1,7 @@
 import { React, useEffect }  from 'react';
 import $ from 'jquery';
 import './innermenu.css'
+import { throttle } from "lodash";
 
 function InnerMenu(props) {
 
@@ -9,6 +10,14 @@ function InnerMenu(props) {
     $('.innerMenu_menu').find('a').each(function() {
       $(this).toggleClass('active', $(this).attr('href') == url)
     })
+
+    window.addEventListener('scroll', throttle(function() {
+      if (window.scrollY > 323) {
+        $("#cover2").toggleClass("position")
+      } 
+      console.log(window.scrollY)
+    }), 500)
+
   });
  
   return (
@@ -20,7 +29,7 @@ function InnerMenu(props) {
             <div className="innerMenu_title title2">{props.title2}</div>
           </div>
         </div>
-        <ul className="innerMenu_cover cover2">
+        <ul className="innerMenu_cover cover2" id="cover2">
           <div className="innerMenu_menubox">
             <li className="innerMenu_menu"><a href={`/${props.link1}`}>{props.menu1}</a></li>
             <li className="innerMenu_menu"><a href={`/${props.link2}`}>{props.menu2}</a></li>

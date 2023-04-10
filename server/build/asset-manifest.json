@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9330d0f1.css",
-    "main.js": "/static/js/main.414565ce.js",
+    "main.css": "/static/css/main.aaa140c4.css",
+    "main.js": "/static/js/main.00cadef2.js",
     "static/js/651.2f3e6a17.chunk.js": "/static/js/651.2f3e6a17.chunk.js",
     "static/media/buildings4.jpg": "/static/media/buildings4.b07b87095c3910530623.jpg",
     "static/media/purpose.jpg": "/static/media/purpose.3d7521d375426c43e6d8.jpg",
@@ -14,12 +14,16 @@
     "static/media/companyinfo.jpg": "/static/media/companyinfo.2eb86d797c6b213d3b6a.jpg",
     "static/media/innermenu.png": "/static/media/innermenu.5601d1cd33077f17d301.png",
     "static/media/forest.png": "/static/media/forest.3feb67dddc21eaa80834.png",
+    "static/media/news3.jpg": "/static/media/news3.f0733e510ef22745ddfc.jpg",
+    "static/media/popup1.jpg": "/static/media/popup1.29f537f310c3a079ffb1.jpg",
     "static/media/title3.png": "/static/media/title3.6a397217e49f28a67e3a.png",
+    "static/media/news2.jpg": "/static/media/news2.047488e1cc66412fe0d6.jpg",
     "static/media/prepare2.png": "/static/media/prepare2.fa2a49897b0a6dc5ffba.png",
     "static/media/map.png": "/static/media/map.8f98c91486c3a49545f5.png",
     "static/media/charity4.png": "/static/media/charity4.fa74b75ce9f26a55c746.png",
     "static/media/charity2.png": "/static/media/charity2.79f9310b469fb0e79d92.png",
     "static/media/motto2.png": "/static/media/motto2.948d45464d268ed271d9.png",
+    "static/media/news1.jpg": "/static/media/news1.e1c3809d18df58e9039d.jpg",
     "static/media/charity3.png": "/static/media/charity3.75eaa3beef5a70573f42.png",
     "static/media/title2.png": "/static/media/title2.1b4f13a44a6254faf80c.png",
     "static/media/kakaomap.png": "/static/media/kakaomap.ad718df81d4254b58297.png",
@@ -30,12 +34,12 @@
     "static/media/back2.png": "/static/media/back2.cb3ef52d8f144590eb47.png",
     "static/media/charity1.png": "/static/media/charity1.5cea5993c509d0744c17.png",
     "index.html": "/index.html",
-    "main.9330d0f1.css.map": "/static/css/main.9330d0f1.css.map",
-    "main.414565ce.js.map": "/static/js/main.414565ce.js.map",
+    "main.aaa140c4.css.map": "/static/css/main.aaa140c4.css.map",
+    "main.00cadef2.js.map": "/static/js/main.00cadef2.js.map",
     "651.2f3e6a17.chunk.js.map": "/static/js/651.2f3e6a17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9330d0f1.css",
-    "static/js/main.414565ce.js"
+    "static/css/main.aaa140c4.css",
+    "static/js/main.00cadef2.js"
   ]
 }

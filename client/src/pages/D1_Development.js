@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { useSelector } from "react-redux"
 import Header from '../components/Haeder';
 import Footer from '../components/Footer';
@@ -6,14 +6,35 @@ import InnerMenu from '../components/InnerMenu';
 import { motion } from "framer-motion";
 import '../css/D1_D3_Form.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 function D1_Development(props) {
 
+  useEffect(()=> {
+    const user = navigator.userAgent;
+    if ( user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1 
+    || user.indexOf("iPad") > -1  || user.indexOf("iPod") > -1 ) {
+        setPerView('1')
+    } else {
+      window.addEventListener(`resize`, function(){
+        if (1200 < window.innerWidth) {
+          setPerView('3')
+        } else if (768 < window.innerWidth < 1200) {
+          setPerView('2')
+        } else if (0 < window.innerWidth < 768) {
+          setPerView('1')
+        }
+      });
+    }
+    
+  }, []);
+
   let state = useSelector((state) => { return state } )
+  let [perView, setPerView] = useState('3')
 
   return (
     <div>
@@ -41,12 +62,14 @@ function D1_Development(props) {
         </div>
 
         <Swiper 
-          slidesPerView={3}
+          modules={[Pagination, Navigation, Autoplay]}
+          autoplay = {{ delay : 1000, disableOnInteraction: false, pauseOnMouseEnter: true}}
+          slidesPerView={perView}
           centeredSlides={true}
           spaceBetween={10}
           pagination={{ type: "fraction"}}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          
           className="swiper"
         >
           {

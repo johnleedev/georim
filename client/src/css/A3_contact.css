@@ -1,5 +1,12 @@
 .contact {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: 100%;
+  height: 100vh;
+  color: black;
+  font-family: 'NanumSquare';
 }
 .contact .box1 {
   width: 100%;
