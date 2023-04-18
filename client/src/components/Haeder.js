@@ -1,12 +1,27 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
+import { throttle } from "lodash";
 import './header.css'
 import classnames from 'classnames';
 import $ from 'jquery';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 function Header () {
 
   const [show, setshow] = useState('')
   const [menushow, setmenushow] = useState('')
+  const [totopshow, settotopshow] = useState('')
+
+  useEffect(()=>{
+    window.addEventListener('scroll', throttle(function() {
+      if (window.scrollY > 150) {
+        settotopshow("show")
+      } else if (window.scrollY < 100) {
+        settotopshow('')
+      }
+    }), 500)
+
+  });
 
   return (
     
@@ -35,13 +50,13 @@ function Header () {
           <div className="submenu_title">
             <li>
               <a className={classnames("submenu_link", menushow)} href="/info">회사소개</a>
-              <a className={classnames("submenu_link", menushow)} href="/organization">조직도</a>
-              <a className={classnames("submenu_link", menushow)} href="/contact">오시는길</a>
+              <a className={classnames("submenu_link", menushow)} href="/info">조직도</a>
+              <a className={classnames("submenu_link", menushow)} href="/info">오시는길</a>
             </li>
             <li>
               <a className={classnames("submenu_link", menushow)} href="/respect">인권존중</a>
-              <a className={classnames("submenu_link", menushow)} href="/people">인재양성</a>
-              <a className={classnames("submenu_link", menushow)} href="/charity">사회공헌</a>
+              <a className={classnames("submenu_link", menushow)} href="/respect">인재양성</a>
+              <a className={classnames("submenu_link", menushow)} href="/respect">사회공헌</a>
             </li>
             <li>
               <a className={classnames("submenu_link", menushow)} href="/message">리더메시지</a>
@@ -78,11 +93,17 @@ function Header () {
       </button>
      
 
-     {/* bottom_white_bar */}
-     <div className="bottom_white_bar">
+      {/* bottom_white_bar */}
+      <div className="bottom_white_bar">
         <div className="bottom_white_bar_text">Development & Construction</div>
       </div>
-     
+
+      {/* to-top*/}
+      <div className={classnames("to_top", totopshow)} onClick={()=>{
+        window.scroll({top: 0, behavior:'smooth'});
+      }}>
+        <FontAwesomeIcon icon={faArrowUp} className="arrow_icon"/>        
+      </div>
 
     </header>
 

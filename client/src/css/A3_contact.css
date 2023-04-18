@@ -134,6 +134,7 @@
 @media screen and (max-width : 1200px){
   .contact {
     width: 90%;
+    height: fit-content;
   }
   .contact .box2 {
     left: 0;
@@ -179,6 +180,8 @@
     right: 0;
     margin: auto;
     width: 90%;
+    height: fit-content;
+    margin-bottom: 200px;
   }
   .contact .wrap .left {
     width: 100%;

@@ -135,11 +135,15 @@
 }  
 
 @media screen and (max-width : 768px) { 
+  .organization {
+    
+  }
   .organization .cover {
     left: 0;
     right: 0;
     margin: auto;
     width: 90%;
+    height: fit-content;
   }
   .organization .cover1 .titlebox {
     width: 300px;

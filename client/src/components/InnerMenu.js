@@ -10,14 +10,6 @@ function InnerMenu(props) {
     $('.innerMenu_menu').find('a').each(function() {
       $(this).toggleClass('active', $(this).attr('href') == url)
     })
-
-    window.addEventListener('scroll', throttle(function() {
-      if (window.scrollY > 323) {
-        $("#cover2").toggleClass("position")
-      } 
-      console.log(window.scrollY)
-    }), 500)
-
   });
  
   return (

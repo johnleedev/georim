@@ -26,6 +26,7 @@ function B1_Respect(props) {
 
       {/* Content */}
 
+      {/* repect ------------------------------------------------------------------------------------------- */}
       <section className="respect">
 
         <div className="maincover">
@@ -56,7 +57,6 @@ function B1_Respect(props) {
         </div>
 
       </section>
-
 
       {/* Footer */}
       <Footer></Footer>

@@ -98,7 +98,7 @@
 
 @media screen and (max-width : 1200px) { 
   .ft {
-    height: 100%;
+    height: 1000px;
     overflow: hidden;
   }
   .ft .ft_cov {

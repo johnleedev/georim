@@ -69,6 +69,8 @@
 }
 .innerMenu .cover2 .innerMenu_menu a:hover {
   color: rgb(117, 117, 117);
+  font-weight: 600;
+  cursor: pointer;
 }
 .innerMenu .cover2 .innerMenu_menu a.active {
   font-size: 20px;

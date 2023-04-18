@@ -454,6 +454,14 @@
   }
   .main .third .cover3 .cont_box {
     width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .main .third .cover3 .cont_box .cont_text {
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
 
